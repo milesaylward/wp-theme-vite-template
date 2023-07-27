@@ -1,0 +1,1 @@
+export { CopyFilePlugin } from './CopyFilePlugin';

@@ -33,7 +33,6 @@ if (!isViteHMRAvailable()) {
 
 add_filter('stylesheet_uri', function () { return getViteDevServerAddress().'/sass/styles/style.scss'; } );
 
-add_filter('stylesheet_directory_uri', function () { return getViteDevServerAddress().'/sass'; });
 const VITE_HMR_CLIENT_HANDLE = 'vite-client';
 function loadScript() {
   wp_enqueue_script(VITE_HMR_CLIENT_HANDLE, getViteDevServerAddress().'/@vite/client', array(), null);

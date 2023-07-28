@@ -8,7 +8,7 @@ require_once get_theme_file_path('/inc/hmr.php');
 $manifest = json_decode(file_get_contents('manifest.json'));
 
 function enqueue_scripts_styles() {
-	wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/style.css', ['theme-style'], null);
+	wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/style.css', array(), null);
 	if (isViteHMRAvailable()) {
 		$handle = 'index';
 		loadJSScriptAsESModule($handle);
